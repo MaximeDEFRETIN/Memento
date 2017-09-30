@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Mon Mémento</title>
+</head>
+<body>
+  <h1>La ligne de commande</h1>
+  <h2>Gestion de documents</h2>
+  <p><span class="gras">Créer un dossier :</span></p>
+  <pre><code>
+    mkdir //permet de créerun dossier<br />
+    mkdir -p dossier/sous-dossier //créer un dossier avec un sous-dossier
+  </code></pre>
+  <br /
+  <p><span class="gras">Voir le conteu d'un dossier :</span></p>
+  <pre><code>
+    ls //permet de voir les dossiers<br />
+    ls dossier/sous-dossier (ex:home/maxime) //permet de voir le contenu de ces dossiers<br />
+    ls -l //affiche les dossier en version longue<br />
+    ls -a //affiche les dossiers cachés<br />
+    ls -al //afiches les dossiers en version longue, y compris ceux cachés
+  </code></pre>
+  <br />
+  <p><span class="gras">Afficher le chemin d'un dossier :</span></p>
+  <pre><code>
+    pwd //ffiche le chemin du dossier dans lequel on se trouve
+  </code></pre>
+  <br />
+  <p><span class="gras">Passer en mode root :</span></p><br />
+  <pre><code>
+    sudo -s //permet de passer en mode superutilisateur
+  </code></pre>
+  <br />
+  <p><span class="gras">Gérer les paquets :</span></p><br />
+  <pre><code>
+    apt search nom-du-paquet //permet de trouver un fichier<br />
+    apt --fix-broken install nom-du-paquet //permet de corriger des problèmes<br />
+    apt search nom-du-logiciel | grep nom (ex:PHP) //permet de recevoir et filtrer les informations reçues<br />
+    dpkg -i nom-du-paquet //permet d'installer un fichier<br />
+    touch nom-du-fichier //permet de créer un fichier
+  </code></pre>
+  <br />
+  <p><span class="gras">Modifier l'emplacement d'un fichier :</span></p>
+  <pre><code>
+    mv nom-du-fichier nouveaux-nom //permet de renommer un fichier<br />
+    mv nom-du-fichier /chemin/dossier //déplacer un fichier<br />
+    mv nom-du-fichier /chemin/dossier/noveau nom-du-fichier //permet de déplacer et renommer un fichier<br /><br />
+    nano-nom-du-fichier //permet de modifier un fichier<br />
+    rm -rf nom-du-dossier/fichier //permet de supprimer un dossier/fichier
+  </code></pre>
+  <br />
+  <p><span class="gras">Utilisation de git :</span></p>
+  <pre><code>
+    git config (et git config --list) //sert à configurer git<br />
+    git clon git://lien (+ /chemin/dossier/) //clone un dépôt distant, inexistant en local(+ clone dans un répertoire)<br />
+    git status //permet de vérifier<br />
+    git .gitinore .nom-du-fichier //permet d'ignorer un fichier<br />
+    git commit nom-du-fichier //visualise si le fichier est modifié<br />
+    git diff //permet de voir ce qui a été par rapport à la dernière validation<br />
+    git diff -- cached //permet de comparer un commit avec son précédent
+  </code></pre>
+  <br />
+  <p><span clas="g">Créer un dépôt :</span></p>
+  <pre><code>
+    git init //créer un dépôt local<br />
+    git add /chemin/dossier/nom-du-fichier (ou nom-du-fichier) //indexe un fichier avec son chemin (ou directement avec son nom)<br />
+    git commit -m "Nom du commit" //donne un nom à un commit, après validation (avec git add)<br />
+    git remote add origin lien-github //créer un dépôt distant<br />
+    git push origin master (nom de la branche principale)<br />
+    git push checkout nom-d'une-branche //bascule vers nom-d'une-branche<br />
+    git branch -d nom-d'une-branche //supprime la branche<br />
+    git pull origin master //récupère les fichiers d'un dépôt distant
+  </code></pre>
+  <br />
+  <p><span class="gras">Créer un fichier Vhost :</span></p>
+  Se mettre en mode root.
+  <pre><code>
+    cd /etc/apache2/sites-available/<br />
+    nano nom-du-fichier (nsuite cp nom-du-fichier nouveau-nom) //créer un fichier après l'avoir édité (copie/colle un fichier et le renome)<br />
+    a2ensite nom-du-fichier (ou a2dissite) //activer le fichier (ou désactiver, sert aussi aux mods)<br />
+    systemctl restart apache2 //recharge le fichier de configuration après l'avoir activé
+  </code></pre>
+  <br />
+  <p><span class="gras"><a href="#Vhost">Configurer un fichier Vhost :</a></span></p>
+  <pre><code>
+    cd /etc/<br />
+    nano hosts
+  </code></pre>
+  <p>Ecrire 127.0.0.1 nom-du-fichier après la ligne 127.0.1.1</p>
+  <pre><code>
+    systemctl restart apache2
+  </code></pre>
+  <br />
+  <p><span class="gras">Rendre inacessiblee certains fichiers :</span></p>
+  <pre><code>
+    cd /etc/php/7.0/apache2<br />
+    nano php.ini
+  </code></pre>
+  <p>Rechercher display_error 2 fois et mettre sur on.</p>
+</body>
+</html>

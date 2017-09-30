@@ -1,0 +1,9 @@
+.gras { font-weight:600; }
+.g { font-weight:500; }
+
+dt { color:red;
+     font-weight:bold; 
+     text-align:center; }
+     
+ dd { color:green;
+      text-align:justify; }
