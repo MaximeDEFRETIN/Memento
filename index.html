@@ -25,15 +25,15 @@
   <br />
   <p><span class="gras">Afficher le chemin d'un dossier :</span></p>
   <pre><code>
-    pwd //ffiche le chemin du dossier dans lequel on se trouve
+    pwd //affiche le chemin du dossier dans lequel on se trouve
   </code></pre>
   <br />
-  <p><span class="gras">Passer en mode root :</span></p><br />
+  <p><span class="gras">Passer en mode root :</span></p>
   <pre><code>
     sudo -s //permet de passer en mode superutilisateur
   </code></pre>
   <br />
-  <p><span class="gras">Gérer les paquets :</span></p><br />
+  <p><span class="gras">Gérer les paquets :</span></p>
   <pre><code>
     apt search nom-du-paquet //permet de trouver un fichier<br />
     apt --fix-broken install nom-du-paquet //permet de corriger des problèmes<br />
@@ -78,8 +78,8 @@
   Se mettre en mode root.
   <pre><code>
     cd /etc/apache2/sites-available/<br />
-    nano nom-du-fichier (nsuite cp nom-du-fichier nouveau-nom) //créer un fichier après l'avoir édité (copie/colle un fichier et le renome)<br />
-    a2ensite nom-du-fichier (ou a2dissite) //activer le fichier (ou désactiver, sert aussi aux mods)<br />
+    nano nom-du-fichier (nsuite cp nom-du-fichier nouveau-nom) //créer un fichier après l'avoir édité (copie/colle un fichier et le renomme)<br />
+    a2ensite nom-du-fichier (ou a2dissite) //activer le fichier (ou désactiver), sert aussi aux mods<br />
     systemctl restart apache2 //recharge le fichier de configuration après l'avoir activé
   </code></pre>
   <br />
@@ -93,7 +93,7 @@
     systemctl restart apache2
   </code></pre>
   <br />
-  <p><span class="gras">Rendre inacessiblee certains fichiers :</span></p>
+  <p><span class="gras">Rendre inacessible certains fichiers :</span></p>
   <pre><code>
     cd /etc/php/7.0/apache2<br />
     nano php.ini

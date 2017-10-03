@@ -2,8 +2,13 @@
 .g { font-weight:500; }
 
 dt { color:red;
-     font-weight:bold; 
+     font-weight:bold;
      text-align:center; }
-     
+
  dd { color:green;
       text-align:justify; }
+
+pre { background-color:black; color:white;
+      border-radius: 10px;
+      width: 60%;
+      margin-left: 5%; }
