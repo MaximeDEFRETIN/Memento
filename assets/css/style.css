@@ -1,14 +1,27 @@
-.gras { font-weight:600; }
-.g { font-weight:500; }
+.gras {
+  font-weight:600;
+}
+.g {
+  font-weight:500;
+}
 
-dt { color:red;
-     font-weight:bold;
-     text-align:center; }
+dt {
+  color:red;
+  font-weight:bold;
+  text-align:center;
+}
+dd {
+  color:green;
+  text-align:center;
+}
 
- dd { color:green;
-      text-align:justify; }
+.def {
+  width:25%;
+  float:left;
+}
 
-pre { background-color:black; color:white;
-      border-radius: 10px;
-      width: 60%;
-      margin-left: 5%; }
+pre {
+  background-color:black; color:white;
+  width: 60%;
+  margin-left: 5%;
+}
