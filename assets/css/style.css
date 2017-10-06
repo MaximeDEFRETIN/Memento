@@ -23,5 +23,6 @@ dd {
 pre {
   background-color:black; color:white;
   width: 60%;
-  margin-left: 5%;
+  border-radius:5px;
+  margin:15px 0 15px 5%;
 }
